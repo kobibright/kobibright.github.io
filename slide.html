@@ -1,0 +1,95 @@
+<!DOCTYP<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;list-style: none;box-sizing: border-box;
+			}
+			img{position: absolute;left: 0;top: 0;width:1340px;height: 640px;}
+			div{
+				perspective: 2000px;
+				
+				perspective-origin: right ;	/*视点的位置*/
+				
+				width: 400px;
+				margin: 100px auto;
+			}
+			ul{
+				position: relative;
+				width: 400px;height: 200px;
+				
+				transform-style: preserve-3d;
+				
+				animation: move 10s linear infinite;
+				
+			}
+			li{
+				position: absolute;left: 0;top: 0;
+				width: 400px;height: 300px;
+				text-align: center;line-height: 200px;
+				
+				backface-visibility: visible;		/*背面不显示*/
+				
+			}
+			ul:hover{
+				animation-play-state: paused;
+			}
+			li:nth-of-type(1){
+				transform: translate3d(0,0,346px);
+				background-image:url(img/QQ图片20170516171931.jpg);
+				background-size:cover ;
+			}
+			li:nth-of-type(2){
+				transform: rotateY(180deg) translate3d(0,0,346px);
+				background-image:url(img/QQ图片20170516171319.jpg);
+				background-size:cover ;
+			}
+			li:nth-of-type(3){
+				transform: rotateY(-60deg) translate3d(0,0,346px);
+				background-image:url(img/03.jpg);
+				background-size:cover ;
+			}
+			li:nth-of-type(4){
+				transform: rotateY(60deg) translate3d(0,0,346px);
+				background-image:url(img/QQ图片20170516171115.jpg);
+				background-size:cover ;
+			}
+			li:nth-of-type(5){
+				transform: rotateY(120deg) translate3d(0,0,346px);
+				background-image:url(img/05.jpg);
+				background-size:cover ;
+			}
+			li:nth-of-type(6){
+				transform: rotateY(-120deg) translate3d(0,0,346px);
+				background-image:url(img/06.jpg);
+				background-size:cover ;
+			}
+			
+			@keyframes move{
+				0%{
+					transform: rotateX(-15deg) rotateY(0);
+				}
+				100%{
+					transform: rotateX(-15deg) rotateY(360deg);
+				}
+				
+				}
+		</style>
+	</head>
+	<body>
+		<img src="img/52.jpg"/>
+		<div>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+	</body>
+</html>
